@@ -7,9 +7,8 @@ import javax.persistence.Id;
 
 @Entity
 @Data
-public class User {
-
+public class Votes {
     @Id
     private String id;
-    private String name;
+    private boolean value;
 }
