@@ -19,6 +19,7 @@ public class Polls {
     private Date toDate;
     private int countYes;
     private int countNo;
+    private String code;
     @OneToMany
     private List<Votes> votes;
 }
