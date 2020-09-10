@@ -2,24 +2,30 @@ package models;
 
 import lombok.Data;
 
-import javax.persistence.Entity;
-import javax.persistence.Id;
-import javax.persistence.OneToMany;
+import javax.persistence.*;
 import java.sql.Date;
 import java.util.List;
 
 @Entity
 @Data
-public class Polls {
+@Table(name="poll_data")
+public class Poll {
 
     @Id
-    private String id;
+    @GeneratedValue(strategy = GenerationType.AUTO)
+    private int id;
     private String question;
     private Date fromDate;
     private Date toDate;
     private int countYes;
     private int countNo;
     private String code;
-    @OneToMany
-    private List<Votes> votes;
+
+    @ManyToOne
+    private User user;
+
+    @OneToMany(mappedBy = "poll")
+    private List<Vote> votes;
+
+
 }
