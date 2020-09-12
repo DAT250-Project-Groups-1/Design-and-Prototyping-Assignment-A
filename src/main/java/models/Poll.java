@@ -1,6 +1,7 @@
 package models;
 
 import lombok.Data;
+import lombok.ToString;
 
 import javax.persistence.*;
 import java.sql.Date;
@@ -8,7 +9,7 @@ import java.util.List;
 
 @Entity
 @Data
-@Table(name="poll_data")
+@Table(name="polls")
 public class Poll {
 
     @Id
@@ -22,10 +23,12 @@ public class Poll {
     private String code;
 
     @ManyToOne
+    @ToString.Exclude
     private User user;
 
-    @OneToMany(mappedBy = "poll")
+    @OneToMany(mappedBy = "poll", fetch = FetchType.EAGER)
     private List<Vote> votes;
+
 
 
 }

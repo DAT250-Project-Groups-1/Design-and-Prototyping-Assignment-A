@@ -7,7 +7,7 @@ import java.util.List;
 
 @Entity
 @Data
-@Table(name="user_data")
+@Table(name="users")
 public class User {
 
     @Id
@@ -17,10 +17,9 @@ public class User {
     private String mail;
     private boolean admin;
 
-    @OneToMany(mappedBy = "user")
+    @OneToMany(mappedBy = "user", fetch = FetchType.EAGER)
     private List<Poll> polls;
 
-    @OneToMany(mappedBy = "user")
+    @OneToMany(mappedBy = "user", fetch = FetchType.EAGER)
     private List<Vote> votes;
-
 }

@@ -1,12 +1,13 @@
 package models;
 
 import lombok.Data;
+import lombok.ToString;
 
 import javax.persistence.*;
 
 @Entity
 @Data
-@Table(name="vote_data")
+@Table(name="votes")
 public class Vote {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
@@ -14,8 +15,10 @@ public class Vote {
     private boolean value;
 
     @ManyToOne
+    @ToString.Exclude
     private User user;
 
     @ManyToOne
+    @ToString.Exclude
     private Poll poll;
 }

@@ -1,10 +1,12 @@
 package data;
 
+import models.Poll;
 import models.Vote;
 
 import javax.persistence.EntityManager;
 import javax.persistence.EntityManagerFactory;
 import javax.persistence.Persistence;
+import javax.persistence.Query;
 import java.util.List;
 import java.util.Optional;
 
@@ -19,26 +21,34 @@ public class VoteDAO implements DAO<Vote> {
 
     @Override
     public List<Vote> read() {
-        return null;
+        Query q =em.createQuery("Select v from Vote v");
+        return q.getResultList();
     }
 
     @Override
-    public Optional<Vote> read(int id) {
-        return Optional.empty();
+    public Vote read(int id) {
+        return em.find(Vote.class, id);
     }
 
     @Override
-    public void create(Vote vote, int id) {
-
+    public void create(Vote vote) {
+        em.getTransaction().begin();
+        em.persist(vote);
+        em.getTransaction().commit();
     }
 
     @Override
-    public void update(Vote vote, int id) {
-
+    public void update(Vote vote) {
+        em.getTransaction().begin();
+        em.merge(vote);
+        em.getTransaction().commit();
     }
 
     @Override
     public void delete(int id) {
-
+        Vote v = em.find(Vote.class, id);
+        em.getTransaction().begin();
+        em.remove(v);
+        em.getTransaction().commit();
     }
 }

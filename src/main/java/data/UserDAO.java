@@ -1,10 +1,12 @@
 package data;
 
+import models.Poll;
 import models.User;
 
 import javax.persistence.EntityManager;
 import javax.persistence.EntityManagerFactory;
 import javax.persistence.Persistence;
+import javax.persistence.Query;
 import java.util.List;
 import java.util.Optional;
 
@@ -19,26 +21,34 @@ public class UserDAO implements DAO<User> {
 
     @Override
     public List<User> read() {
-        return null;
+        Query q = em.createQuery("Select u from User u");
+        return q.getResultList();
     }
 
     @Override
-    public Optional<User> read(int id) {
-        return Optional.empty();
+    public User read(int id) {
+        return em.find(User.class, id);
     }
 
     @Override
-    public void create(User user, int id) {
-
+    public void create(User user) {
+        em.getTransaction().begin();
+        em.persist(user);
+        em.getTransaction().commit();
     }
 
     @Override
-    public void update(User user, int id) {
-
+    public void update(User user) {
+        em.getTransaction().begin();
+        em.merge(user);
+        em.getTransaction().commit();
     }
 
     @Override
     public void delete(int id) {
-
+        User u = em.find(User.class, id);
+        em.getTransaction().begin();
+        em.remove(u);
+        em.getTransaction().commit();
     }
 }
