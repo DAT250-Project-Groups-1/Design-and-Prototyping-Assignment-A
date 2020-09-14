@@ -29,7 +29,7 @@ If the user who is logged is an admin, they are able to manage the users.
 
 ![Public polls screen](assets/public-polls-screen.png)
 
-Here the user has the option to choose from available polls and vote on them. On the bottom right there is a button for a popup, where the user can enter a poll code and it will get added to the list.
+Here the user has the option to choose from available polls and vote on them. On the bottom right there is a button for a popup which has two options, the user can enter a poll code to "search for" or find a specific poll, or the user can choose to create a new poll (if logged in). There will be a similar screen for private polls. 
 
 ### Login screen
 
@@ -54,7 +54,7 @@ This is an admin's view of the sidebar, which includes the ability to manage use
 
 ![Users screen](assets/users-screen.png)
 
-Here is the screen the admin is able to view for managing the users. Here they can add, edit or delete existing users, as well as creating new admins.
+Admin screen for managing the users. Admins can add, edit or delete existing users, as well as create new admins.
 
 ## Architectural Diagram
 
