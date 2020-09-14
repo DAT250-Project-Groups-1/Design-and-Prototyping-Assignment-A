@@ -25,30 +25,29 @@ If the user who is logged is an admin, they are able to manage the users.
 
 ## User Screens
 
-### Public polls screen
+### Polls screen
 
-![Public polls screen](assets/public-polls-screen.png)
+![Polls screen](assets/polls-screen.png)
 
-Here the user has the option to choose from available polls and vote on them. On the bottom right there is a button for a popup which has two options, the user can enter a poll code to "search for" or find a specific poll, or the user can choose to create a new poll (if logged in). There will be a similar screen for private polls.
+The main screen of the application. Guests can view and vote on available public polls. The button in the bottom right opens the "join poll" popup, where the guest can enter a code to access a specific public poll. Logged in users can utilize the same popup to access private polls. The top right button redirects to the login screen.
 
 ### Login screen
 
 ![Login screen](assets/login-screen.png)
 
-On the bottom right is the login button, which redirects to a login screen. Here the user can enter their credentials in order to log in.
+Users can enter their credentials to log in to the application. The back button leads back to the Polls screen.
 
 ### Join poll screen
 
 ![Join poll screen](assets/join-poll-screen.png)
 
-When tapping the button for joining a poll, the user gets a popup where they can enter the code for a poll in order to vote on it.
+When tapping the button for joining a poll, the user gets a popup where they can enter the code for a poll in order to vote on it. Guests can access public polls, while logged in users can access both public and private polls.
 
-### Navigation screen
+### My polls screen
 
-![Navigation Screen](assets/navigation-screen.png)
+![My polls screen](assets/my-polls-screen.png)
 
-In the sidebar menu, the user has the possibility to view their public and private polls, through which they can create new polls.
-This is an admin's view of the sidebar, which includes the ability to manage users.
+Overview of the polls a user has made. The user can create new polls and close existing polls. 
 
 ### Manage users screen
 
