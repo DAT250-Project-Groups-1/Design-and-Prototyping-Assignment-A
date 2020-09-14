@@ -22,13 +22,23 @@
 
 ## User Screens
 
+### Public polls screen
+
 ![Public polls screen](assets/public-polls-screen.png)
+
+### Login screen
 
 ![Login screen](assets/login-screen.png)
 
+### Join poll screen
+
 ![Join poll screen](assets/join-poll-screen.png)
 
+### Navigation screen
+
 ![Navigation Screen](assets/navigation-screen.png)
+
+### Manage users screen
 
 ![Users screen](assets/users-screen.png)
 
