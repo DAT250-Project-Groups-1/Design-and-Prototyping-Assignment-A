@@ -64,19 +64,19 @@ FeedApp comprise of 3 main parts, frontend, backend, IOT device:
 
 ### Frontend
 
-- **Mobile app** Available to download from AppStore and Play Store
-- **Web app** Served by a nginx server within a docker container deployed in the cloud
+- **Mobile app:** Available to download from AppStore and Play Store
+- **Web app:** Served by a nginx server within a docker container deployed in the cloud
 
 Since our frontend will be written in Flutter, the same code can be compiled to run on both a phone and the web.
 
 ### Backend
 
-- **API** Written in Java, using Spring Boot wrapped in a docker container deployed in the cloud
-- **JPA** The API uses eclipselink as JPA provider to translate object to tables and relations
-- **SQL** PostgreSQL database is used
+- **API:** Written in Java, using Spring Boot wrapped in a docker container deployed in the cloud
+- **JPA:** The API uses eclipselink as JPA provider to translate object to tables and relations
+- **SQL:** PostgreSQL database is used
 
 ### IOT
 
-- **Arduino** Will be connected to a poll and post votes to the API
+- **Arduino:** Will be connected to a poll and post votes to the API
 
 The users will authenticate with Google accounts and use Googles OAuth flow.
