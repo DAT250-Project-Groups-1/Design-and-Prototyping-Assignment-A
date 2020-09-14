@@ -20,29 +20,34 @@ public class PollDAO implements DAO<Poll> {
 
     @Override
     public List<Poll> read() {
-        return null;
+        Query q =em.createQuery("Select p from Poll p");
+        return q.getResultList();
     }
 
     @Override
-    public Optional<Poll> read(int id) {
-        Query q = em.createNativeQuery("SELECT * WHERE 'id' = " + id + " FROM Poll");
-        Poll poll = em.find(Poll.class, id);
-        return Optional.empty();
+    public Poll read(int id) {
+       return em.find(Poll.class, id);
     }
 
     @Override
-    public void create(Poll poll, int id) {
-        Query q = em.createNativeQuery("INSERT INTO Poll (");
-
+    public void create(Poll poll) {
+        em.getTransaction().begin();
+        em.persist(poll);
+        em.getTransaction().commit();
     }
 
     @Override
-    public void update(Poll poll, int id) {
-
+    public void update(Poll poll) {
+        em.getTransaction().begin();
+        em.merge(poll);
+        em.getTransaction().commit();
     }
 
     @Override
     public void delete(int id) {
-
+        Poll p = em.find(Poll.class, id);
+        em.getTransaction().begin();
+        em.remove(p);
+        em.getTransaction().commit();
     }
 }
