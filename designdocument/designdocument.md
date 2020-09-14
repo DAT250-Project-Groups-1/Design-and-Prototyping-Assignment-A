@@ -4,13 +4,13 @@
 
 ![Use Cases](assets/usecases.png)
 
-* **Vote public polls:** Anyone can vote on public polls via the public polls screen.
-* **Register:** Everyone can register as a user
-* **Login:** Registered users are able to log in
-* **Create polls:** Only registered users who are logged in can create polls.
-* **Close polls:** Logged in users who has created a poll, are able to close their poll.
-* **Vote private polls:** Only users who are registered and logged in can vote on private polls.
-* **Manage users:** The administrators are the only ones who can manage users by deleting, adding or editing them.
+- **Vote public polls:** Anyone can vote on public polls via the public polls screen.
+- **Register:** Everyone can register as a user
+- **Login:** Registered users are able to log in
+- **Create polls:** Only registered users who are logged in can create polls.
+- **Close polls:** Logged in users who has created a poll, are able to close their poll.
+- **Vote private polls:** Only users who are registered and logged in can vote on private polls.
+- **Manage users:** The administrators are the only ones who can manage users by deleting, adding or editing them.
 
 ## Domain model
 
@@ -29,7 +29,7 @@ If the user who is logged is an admin, they are able to manage the users.
 
 ![Public polls screen](assets/public-polls-screen.png)
 
-Here the user has the option to choose from available polls and vote on them. On the bottom right there is a button for a popup which has two options, the user can enter a poll code to "search for" or find a specific poll, or the user can choose to create a new poll (if logged in). There will be a similar screen for private polls. 
+Here the user has the option to choose from available polls and vote on them. On the bottom right there is a button for a popup which has two options, the user can enter a poll code to "search for" or find a specific poll, or the user can choose to create a new poll (if logged in). There will be a similar screen for private polls.
 
 ### Login screen
 
@@ -59,3 +59,24 @@ Admin screen for managing the users. Admins can add, edit or delete existing use
 ## Architectural Diagram
 
 ![Architectural Diagram](assets/architecturaldiagram.png)
+
+FeedApp comprise of 3 main parts, frontend, backend, IOT device:
+
+### Frontend
+
+- **Mobile app** Available to download from AppStore and Play Store
+- **Web app** Served by a nginx server within a docker container deployed in the cloud
+
+Since our frontend will be written in Flutter, the same code can be compiled to run on both a phone and the web.
+
+### Backend
+
+- **API** Written in Java, using Spring Boot wrapped in a docker container deployed in the cloud
+- **JPA** The API uses eclipselink as JPA provider to translate object to tables and relations
+- **SQL** PostgreSQL database is used
+
+### IOT
+
+- **Arduino** Will be connected to a poll and post votes to the API
+
+The users will authenticate with Google accounts and use Googles OAuth flow.
