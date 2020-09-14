@@ -6,6 +6,8 @@
 
 ## Domain model
 
+![Domain Model](assets/domainmodel.png)
+
 ## Application Flow
 
 ![Application Flow](assets/applicationflowdiagram.png)
