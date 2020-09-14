@@ -15,7 +15,7 @@ public class User {
     private int id;
     private String name;
     private String mail;
-    private boolean admin;
+    private boolean isAdmin;
 
     @OneToMany(mappedBy = "user", fetch = FetchType.EAGER)
     private List<Poll> polls;

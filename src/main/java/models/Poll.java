@@ -21,6 +21,7 @@ public class Poll {
     private int countYes;
     private int countNo;
     private String code;
+    private boolean isPrivate;
 
     @ManyToOne
     @ToString.Exclude
