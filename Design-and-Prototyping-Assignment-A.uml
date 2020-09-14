@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Diagram>
+  <ID>Persistence</ID>
+  <OriginalElement>JavaeeElement:/7d65904f/Design-and-Prototyping-Assignment-A/Design-and-Prototyping-Assignment-A/jpa/JPA/PersistenceModel</OriginalElement>
+  <nodes>
+    <node x="0.0" y="178.0">Vote#file:///home/db/projects/Design-and-Prototyping-Assignment-A/src/main/java/models/Vote.java</node>
+    <node x="32.5" y="308.0">Poll#file:///home/db/projects/Design-and-Prototyping-Assignment-A/src/main/java/models/Poll.java</node>
+    <node x="36.5" y="0.0">User#file:///home/db/projects/Design-and-Prototyping-Assignment-A/src/main/java/models/User.java</node>
+  </nodes>
+  <notes />
+  <edges>
+    <edge source="Vote#file:///home/db/projects/Design-and-Prototyping-Assignment-A/src/main/java/models/Vote.java" target="User#file:///home/db/projects/Design-and-Prototyping-Assignment-A/src/main/java/models/User.java">
+      <point x="0.0" y="-40.0" />
+      <point x="66.5" y="153.0" />
+      <point x="70.75" y="153.0" />
+      <point x="-34.25" y="64.0" />
+    </edge>
+    <edge source="Poll#file:///home/db/projects/Design-and-Prototyping-Assignment-A/src/main/java/models/Poll.java" target="Vote#file:///home/db/projects/Design-and-Prototyping-Assignment-A/src/main/java/models/Vote.java">
+      <point x="-36.25" y="-100.0" />
+      <point x="68.75" y="283.0" />
+      <point x="66.5" y="283.0" />
+      <point x="0.0" y="40.0" />
+    </edge>
+    <edge source="Poll#file:///home/db/projects/Design-and-Prototyping-Assignment-A/src/main/java/models/Poll.java" target="User#file:///home/db/projects/Design-and-Prototyping-Assignment-A/src/main/java/models/User.java">
+      <point x="36.25" y="-100.0" />
+      <point x="141.25" y="283.0" />
+      <point x="143.5" y="283.0" />
+      <point x="143.5" y="153.0" />
+      <point x="139.25" y="153.0" />
+      <point x="34.25" y="64.0" />
+    </edge>
+  </edges>
+  <settings layout="Hierarchic Group" zoom="1.0" x="66.5" y="254.0" />
+  <SelectedNodes />
+  <Categories>
+    <Category>Embeddables</Category>
+    <Category>Properties</Category>
+    <Category>Superclasses</Category>
+  </Categories>
+</Diagram>
+
