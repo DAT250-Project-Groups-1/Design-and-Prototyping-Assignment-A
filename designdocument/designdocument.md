@@ -20,7 +20,7 @@
 
 ![Application Flow](assets/applicationflowdiagram.png)
 
-The application consists of seven screens. The home screen is the `Public polls screen` where the user can chose to vote on a public poll, join a poll by a code or log in on the `Login screen`. When the user is logged in, they have more possibilities, and are able to create both public and private polls, which there are separate screens for.
+The application consists of five screens. The home screen is the `Public polls screen` where the user can chose to vote on a public poll, join a poll by a code or log in on the `Login screen`. When the user is logged in, they have more possibilities, and are able to create both public and private polls, which is accessed through the `My polls screen`, which is a list of the user's created polls.
 If the user who is logged is an admin, they are able to manage the users.
 
 ## User Screens
